@@ -3,7 +3,7 @@
 
 *__pycache__
 *.venv
-# *.env
-# *polygon.ipynb
-# *polygon.py
-# compile.md
+*.env
+*polygon.ipynb
+*polygon.py
+compile.md
