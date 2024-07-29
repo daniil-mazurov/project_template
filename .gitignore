@@ -5,3 +5,4 @@
 *.venv
 */.env
 *polygon.ipynb
+*polygon.py
