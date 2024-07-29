@@ -1,0 +1,1 @@
+pyinstaller -D -d imports --hidden-import src --add-data=src:src main.py
