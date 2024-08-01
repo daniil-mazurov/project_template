@@ -15,7 +15,7 @@
             "name": "Шаблон запуска точки входа",
             "type": "debugpy",
             "request": "launch",
-            "program": "./main.py",
+            "program": "./_main.py",
             "console": "integratedTerminal"
         },
         {
