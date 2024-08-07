@@ -1,9 +1,6 @@
 import copy
 import logging
 
-# from pydantic import SecretStr
-from pydantic_settings import BaseSettings
-
 
 class ColoredConsoleHandler(logging.StreamHandler):
     def emit(self, record):
@@ -38,17 +35,3 @@ class ExtraFormatter(logging.Formatter):
             self._style._fmt += format_str
 
         return super().format(record)
-
-
-class Settings(BaseSettings):
-    param_name: str
-    # token: SecretStr
-    ...
-
-    @property
-    def fix_param(self):
-        """Параметр с фиксированным значением"""
-        return
-
-
-settings = Settings()

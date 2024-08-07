@@ -1,6 +1,11 @@
 import logging
 
+from core.err import exception_logging
+
 logger = logging.getLogger()
 
 
-def func(): ...
+@exception_logging()
+def func():
+    """Первая функция"""
+    ...
