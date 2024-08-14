@@ -16,8 +16,7 @@ logger = logging.getLogger()
 
 
 def main():
-    """Точка входа и парсер аргументов
-    """
+    """Точка входа и парсер аргументов"""
     parser = argparse.ArgumentParser(
         prog="ProgramName",
         description="What the program does",

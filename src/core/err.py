@@ -28,7 +28,9 @@ def exception_logging(
             record = old_factory(*args, **kwargs)
             if hasattr(func, "__wrapped__"):
                 record.funcName = func.__wrapped__.__name__
-                record.filename = os.path.basename(func.__wrapped__.__code__.co_filename)
+                record.filename = os.path.basename(
+                    func.__wrapped__.__code__.co_filename
+                )
                 record.lineno = func.__wrapped__.__code__.co_firstlineno
             else:
                 record.funcName = func.__name__

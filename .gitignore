@@ -1,12 +1,12 @@
-*build
-*dist
+**build
+**dist
 
-*__pycache__
+**__pycache__
 *.venv
 *.env
-*polygon.ipynb
-*polygon.py
+**polygon.ipynb
+**polygon.py
 compile.md
 
-*logs
-*.log
+**logs
+**.log
