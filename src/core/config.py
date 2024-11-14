@@ -1,10 +1,16 @@
+import logging
+
 # from pydantic import SecretStr
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+from core.path import PATH
+
+logger = logging.getLogger()
 
 
 class Settings(BaseSettings):
-    param_name: str
-    # token: SecretStr
+    PARAM: str
+    # TOKEN: SecretStr
     ...
 
     @property
@@ -12,5 +18,14 @@ class Settings(BaseSettings):
         """Параметр с фиксированным значением"""
         return
 
+    model_config = SettingsConfigDict(
+        env_file=PATH / ".env", env_file_encoding="utf-8", extra="ignore"
+    )
 
-settings = Settings()
+
+try:
+    settings = Settings()
+
+except ValueError:
+    logger.exception("Ошибка загрузки входных параметров")
+    raise

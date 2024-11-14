@@ -2,7 +2,7 @@
 name = "template"
 version = "0.1.0"
 description = ""
-authors = ["zveropolis <zadira-era@yandex.ru>"]
+authors = ["daniil-mazurov"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -12,6 +12,8 @@ pydantic-settings = "^2.4.0"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.13.2"
+pdoc = "^15.0.0"
+ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core"]
